@@ -19,16 +19,9 @@
                     },
                     colors: {
                         gold: {
-                            50: '#faf6f0',
-                            100: '#f0e6d3',
-                            200: '#e0ccaa',
-                            300: '#d4b896',
-                            400: '#c9a87c',
-                            500: '#b8956a',
-                            600: '#a07d52',
-                            700: '#8b6b45',
-                            800: '#6b5235',
-                            900: '#4a3825',
+                            50: '#faf6f0', 100: '#f0e6d3', 200: '#e0ccaa',
+                            300: '#d4b896', 400: '#c9a87c', 500: '#b8956a',
+                            600: '#a07d52', 700: '#8b6b45', 800: '#6b5235', 900: '#4a3825',
                         },
                         cream: '#faf8f5',
                         charcoal: '#2c2c2c',
@@ -38,119 +31,42 @@
         }
     </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #faf8f5;
             color: #2c2c2c;
             overflow-x: hidden;
         }
-        
-        .font-serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #faf8f5;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #d4b896;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #b8956a;
-        }
-        
-        /* Animations */
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #faf8f5; }
+        ::-webkit-scrollbar-thumb { background: #d4b896; border-radius: 4px; }
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
         }
-        
         @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
         }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-        
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        
-        .animate-fade-in {
-            animation: fadeIn 1s ease-out forwards;
-        }
-        
-        .animate-slide-left {
-            animation: slideInLeft 0.8s ease-out forwards;
-        }
-        
-        .animate-slide-right {
-            animation: slideInRight 0.8s ease-out forwards;
-        }
-        
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        .animate-slide-left { animation: slideInLeft 0.8s ease-out forwards; }
+        .animate-slide-right { animation: slideInRight 0.8s ease-out forwards; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
         .delay-100 { animation-delay: 0.1s; }
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
         .delay-400 { animation-delay: 0.4s; }
         .delay-500 { animation-delay: 0.5s; }
-        .delay-600 { animation-delay: 0.6s; }
-        
-        /* Hero Parallax */
         .hero-bg {
             background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-attachment: fixed;
@@ -158,199 +74,73 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        
-        /* Glassmorphism */
         .glass {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
         .glass-dark {
             background: rgba(44, 44, 44, 0.8);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
-        
-        /* Hover Effects */
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .hover-scale {
-            transition: transform 0.5s ease;
-        }
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
-        
-        /* Image Overlay */
-        .img-overlay {
-            position: relative;
-            overflow: hidden;
-        }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .hover-scale { transition: transform 0.5s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
+        .img-overlay { position: relative; overflow: hidden; }
         .img-overlay::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 100%);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        .img-overlay:hover::after {
-            opacity: 1;
-        }
-        
-        /* Navigation */
-        .nav-hidden {
-            transform: translateY(-100%);
-        }
-        .nav-visible {
-            transform: translateY(0);
-        }
-        
-        /* Service Card Active State */
-        .service-card.active {
-            border-color: #d4b896;
-            background-color: #faf6f0;
-        }
-        
-        /* Booking Form Steps */
-        .step-indicator {
-            transition: all 0.3s ease;
-        }
-        .step-indicator.active {
-            background-color: #b8956a;
-            color: white;
-            border-color: #b8956a;
-        }
-        .step-indicator.completed {
-            background-color: #8b6b45;
-            color: white;
-            border-color: #8b6b45;
-        }
-        
-        /* Custom Radio/Checkbox */
-        .custom-radio:checked + div {
-            border-color: #b8956a;
-            background-color: #faf6f0;
-        }
-        .custom-radio:checked + div .check-icon {
-            opacity: 1;
-            transform: scale(1);
-        }
-        
-        /* Time Slot */
-        .time-slot {
-            transition: all 0.2s ease;
-        }
-        .time-slot:hover:not(.disabled) {
-            border-color: #b8956a;
-            background-color: #faf6f0;
-        }
-        .time-slot.selected {
-            background-color: #b8956a;
-            color: white;
-            border-color: #b8956a;
-        }
-        .time-slot.disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-            background-color: #f3f4f6;
-        }
-        
-        /* Loading Spinner */
+        .img-overlay:hover::after { opacity: 1; }
+        .nav-hidden { transform: translateY(-100%); }
+        .nav-visible { transform: translateY(0); }
+        .service-card.active { border-color: #d4b896; background-color: #faf6f0; }
+        .step-indicator { transition: all 0.3s ease; }
+        .step-indicator.active { background-color: #b8956a; color: white; border-color: #b8956a; }
+        .step-indicator.completed { background-color: #8b6b45; color: white; border-color: #8b6b45; }
+        .custom-radio:checked + div { border-color: #b8956a; background-color: #faf6f0; }
+        .custom-radio:checked + div .check-icon { opacity: 1; transform: scale(1); }
+        .time-slot { transition: all 0.2s ease; }
+        .time-slot:hover:not(.disabled) { border-color: #b8956a; background-color: #faf6f0; }
+        .time-slot.selected { background-color: #b8956a; color: white; border-color: #b8956a; }
+        .time-slot.disabled { opacity: 0.4; cursor: not-allowed; background-color: #f3f4f6; }
         .spinner {
             border: 3px solid #f3f4f6;
             border-top: 3px solid #b8956a;
             border-radius: 50%;
-            width: 24px;
-            height: 24px;
+            width: 24px; height: 24px;
             animation: spin 1s linear infinite;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        /* Notification Toast */
-        .toast {
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-        }
-        .toast.show {
-            transform: translateX(0);
-        }
-        
-        /* Price Strikethrough Animation */
-        .price-reveal {
-            position: relative;
-            display: inline-block;
-        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .toast { transform: translateX(100%); transition: transform 0.3s ease; }
+        .toast.show { transform: translateX(0); }
+        .price-reveal { position: relative; display: inline-block; }
         .price-reveal::after {
             content: '';
             position: absolute;
-            left: 0;
-            top: 50%;
-            width: 100%;
-            height: 1px;
+            left: 0; top: 50%;
+            width: 100%; height: 1px;
             background: #b8956a;
             transform: scaleX(0);
             transform-origin: right;
             transition: transform 0.3s ease;
         }
-        .price-reveal:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-        
-        /* Mobile Menu */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-        }
-        .mobile-menu.open {
-            transform: translateX(0);
-        }
-        
-        /* Testimonial Slider */
-        .testimonial-slide {
-            opacity: 0;
-            position: absolute;
-            transition: opacity 0.5s ease;
-        }
-        .testimonial-slide.active {
-            opacity: 1;
-            position: relative;
-        }
-        
-        /* Gallery Grid */
-        .gallery-item {
-            break-inside: avoid;
-            margin-bottom: 1rem;
-        }
-        
-        /* Smooth section transition */
-        section {
-            opacity: 1;
-        }
-        
-        /* Input Focus Animation */
-        .input-group {
-            position: relative;
-        }
+        .price-reveal:hover::after { transform: scaleX(1); transform-origin: left; }
+        .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+        .mobile-menu.open { transform: translateX(0); }
+        .testimonial-slide { opacity: 0; position: absolute; transition: opacity 0.5s ease; }
+        .testimonial-slide.active { opacity: 1; position: relative; }
+        .input-group { position: relative; }
         .input-group label {
             position: absolute;
-            left: 1rem;
-            top: 50%;
+            left: 1rem; top: 50%;
             transform: translateY(-50%);
             color: #9ca3af;
             transition: all 0.2s ease;
@@ -379,19 +169,14 @@
         }
         .input-group input:focus,
         .input-group textarea:focus,
-        .input-group select:focus {
-            border-color: #b8956a;
-        }
-        
-        /* Confetti Animation */
+        .input-group select:focus { border-color: #b8956a; }
         @keyframes confetti-fall {
             0% { transform: translateY(-100%) rotate(0deg); opacity: 1; }
             100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
         }
         .confetti {
             position: fixed;
-            width: 10px;
-            height: 10px;
+            width: 10px; height: 10px;
             top: -10px;
             animation: confetti-fall 3s ease-out forwards;
             z-index: 9999;
@@ -399,8 +184,7 @@
     </style>
 </head>
 <body class="antialiased">
-
-    <!-- Navigation -->
+        <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 nav-hidden">
         <div class="glass-dark text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -465,8 +249,7 @@
             </a>
         </div>
     </section>
-
-    <!-- About Section -->
+        <!-- About Section -->
     <section id="about" class="py-20 md:py-32 bg-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -519,4 +302,840 @@
             <div class="text-center mb-16 reveal-on-scroll">
                 <p class="text-gold-600 text-sm tracking-[0.2em] uppercase mb-4">What We Offer</p>
                 <h2 class="font-serif text-4xl md:text-5xl font-light mb-4 text-charcoal">
-                    Sign
+                    Signature <em class="italic text-gold-600">Services</em>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    From precision cuts to transformative color, our comprehensive menu of services is designed to elevate your natural beauty.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="service-card group cursor-pointer border border-gray-200 p-8 transition-all duration-300 hover:border-gold-300 hover:shadow-lg reveal-on-scroll" onclick="filterServices('hair')">
+                    <div class="w-16 h-16 bg-gold-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold-100 transition-colors">
+                        <i class="fas fa-cut text-gold-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-3 text-charcoal">Hair Design</h3>
+                    <p class="text-gray-600 text-sm mb-4">Precision cuts, styling, and treatments tailored to your unique texture and lifestyle.</p>
+                    <span class="text-gold-600 text-sm tracking-widest uppercase group-hover:underline">View Services</span>
+                </div>
+
+                <div class="service-card group cursor-pointer border border-gray-200 p-8 transition-all duration-300 hover:border-gold-300 hover:shadow-lg reveal-on-scroll" onclick="filterServices('color')">
+                    <div class="w-16 h-16 bg-gold-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold-100 transition-colors">
+                        <i class="fas fa-palette text-gold-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-3 text-charcoal">Color Artistry</h3>
+                    <p class="text-gray-600 text-sm mb-4">From subtle balayage to bold fashion colors, our colorists are true artists.</p>
+                    <span class="text-gold-600 text-sm tracking-widest uppercase group-hover:underline">View Services</span>
+                </div>
+
+                <div class="service-card group cursor-pointer border border-gray-200 p-8 transition-all duration-300 hover:border-gold-300 hover:shadow-lg reveal-on-scroll" onclick="filterServices('spa')">
+                    <div class="w-16 h-16 bg-gold-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold-100 transition-colors">
+                        <i class="fas fa-spa text-gold-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-3 text-charcoal">Spa & Wellness</h3>
+                    <p class="text-gray-600 text-sm mb-4">Rejuvenating treatments that restore balance to your hair, skin, and spirit.</p>
+                    <span class="text-gold-600 text-sm tracking-widest uppercase group-hover:underline">View Services</span>
+                </div>
+            </div>
+
+            <div id="service-details" class="bg-cream rounded-lg p-8 md:p-12">
+                <div class="flex flex-wrap gap-4 mb-8 justify-center">
+                    <button onclick="filterServices('all')" class="service-filter px-6 py-2 text-sm tracking-widest uppercase border border-gold-600 text-gold-600 hover:bg-gold-600 hover:text-white transition-all active" data-filter="all">All</button>
+                    <button onclick="filterServices('hair')" class="service-filter px-6 py-2 text-sm tracking-widest uppercase border border-gray-300 text-gray-600 hover:border-gold-600 hover:text-gold-600 transition-all" data-filter="hair">Hair</button>
+                    <button onclick="filterServices('color')" class="service-filter px-6 py-2 text-sm tracking-widest uppercase border border-gray-300 text-gray-600 hover:border-gold-600 hover:text-gold-600 transition-all" data-filter="color">Color</button>
+                    <button onclick="filterServices('spa')" class="service-filter px-6 py-2 text-sm tracking-widest uppercase border border-gray-300 text-gray-600 hover:border-gold-600 hover:text-gold-600 transition-all" data-filter="spa">Spa</button>
+                </div>
+
+                <div id="services-grid" class="grid md:grid-cols-2 gap-6"></div>
+            </div>
+        </div>
+    </section>
+        <!-- Gallery Section -->
+    <section id="gallery" class="py-20 md:py-32 bg-charcoal text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <p class="text-gold-400 text-sm tracking-[0.2em] uppercase mb-4">Portfolio</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-light mb-4">
+                    Our <em class="italic text-gold-400">Masterpieces</em>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Browse through our collection of transformations and signature styles.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="gallery-grid">
+                <div class="gallery-item col-span-2 row-span-2 relative group overflow-hidden cursor-pointer reveal-on-scroll" onclick="openLightbox(0)">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hair Style" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity font-serif text-xl italic">Bridal Elegance</span>
+                    </div>
+                </div>
+                <div class="gallery-item relative group overflow-hidden cursor-pointer reveal-on-scroll" onclick="openLightbox(1)">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Color Work" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity font-serif text-lg italic">Balayage</span>
+                    </div>
+                </div>
+                <div class="gallery-item relative group overflow-hidden cursor-pointer reveal-on-scroll" onclick="openLightbox(2)">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Precision Cut" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity font-serif text-lg italic">Precision Cut</span>
+                    </div>
+                </div>
+                <div class="gallery-item relative group overflow-hidden cursor-pointer reveal-on-scroll" onclick="openLightbox(3)">
+                    <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Spa Treatment" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity font-serif text-lg italic">Spa Ritual</span>
+                    </div>
+                </div>
+                <div class="gallery-item relative group overflow-hidden cursor-pointer reveal-on-scroll" onclick="openLightbox(4)">
+                    <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Styling" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity font-serif text-lg italic">Event Styling</span>
+                    </div>
+                </div>
+                <div class="gallery-item col-span-2 relative group overflow-hidden cursor-pointer reveal-on-scroll" onclick="openLightbox(5)">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Salon Atmosphere" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity font-serif text-xl italic">Our Space</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black bg-opacity-95 hidden flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-gold-400 transition-colors">
+            <i class="fas fa-times"></i>
+        </button>
+        <button onclick="changeImage(-1)" class="absolute left-6 text-white text-3xl hover:text-gold-400 transition-colors">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button onclick="changeImage(1)" class="absolute right-6 text-white text-3xl hover:text-gold-400 transition-colors">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-full object-contain">
+        <p id="lightbox-caption" class="absolute bottom-6 text-white font-serif text-xl italic"></p>
+    </div>
+        <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 md:py-32 bg-cream">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <p class="text-gold-600 text-sm tracking-[0.2em] uppercase mb-4">Testimonials</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-light mb-4 text-charcoal">
+                    Client <em class="italic text-gold-600">Stories</em>
+                </h2>
+            </div>
+
+            <div class="relative h-80 md:h-64 reveal-on-scroll" id="testimonial-container"></div>
+
+            <div class="flex justify-center gap-2 mt-8" id="testimonial-dots"></div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <p class="text-gold-600 text-sm tracking-[0.2em] uppercase mb-4">The Artists</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-light mb-4 text-charcoal">
+                    Meet Our <em class="italic text-gold-600">Team</em>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="group text-center reveal-on-scroll">
+                    <div class="relative mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Stylist" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-end justify-center pb-6">
+                            <div class="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <a href="#" class="text-white hover:text-gold-400"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-white hover:text-gold-400"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-xl mb-1">Isabella Chen</h3>
+                    <p class="text-gold-600 text-sm tracking-widest uppercase mb-2">Creative Director</p>
+                    <p class="text-gray-600 text-sm">Specialist in precision cuts and editorial styling</p>
+                </div>
+
+                <div class="group text-center reveal-on-scroll">
+                    <div class="relative mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Stylist" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-end justify-center pb-6">
+                            <div class="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <a href="#" class="text-white hover:text-gold-400"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-white hover:text-gold-400"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-xl mb-1">Marcus Rivera</h3>
+                    <p class="text-gold-600 text-sm tracking-widest uppercase mb-2">Color Director</p>
+                    <p class="text-gray-600 text-sm">Master colorist with 10+ years experience</p>
+                </div>
+
+                <div class="group text-center reveal-on-scroll">
+                    <div class="relative mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Stylist" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-end justify-center pb-6">
+                            <div class="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <a href="#" class="text-white hover:text-gold-400"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-white hover:text-gold-400"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-xl mb-1">Sophie Laurent</h3>
+                    <p class="text-gold-600 text-sm tracking-widest uppercase mb-2">Senior Stylist</p>
+                    <p class="text-gray-600 text-sm">Expert in balayage and hair extensions</p>
+                </div>
+
+                <div class="group text-center reveal-on-scroll">
+                    <div class="relative mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Stylist" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-end justify-center pb-6">
+                            <div class="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <a href="#" class="text-white hover:text-gold-400"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-white hover:text-gold-400"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-xl mb-1">James Park</h3>
+                    <p class="text-gold-600 text-sm tracking-widest uppercase mb-2">Spa Therapist</p>
+                    <p class="text-gray-600 text-sm">Specialized in scalp treatments and wellness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Booking Section -->
+    <section id="booking" class="py-20 md:py-32 bg-cream">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal-on-scroll">
+                <p class="text-gold-600 text-sm tracking-[0.2em] uppercase mb-4">Reservations</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-light mb-4 text-charcoal">
+                    Book Your <em class="italic text-gold-600">Experience</em>
+                </h2>
+            </div>
+
+            <div class="flex justify-center mb-12 reveal-on-scroll">
+                <div class="flex items-center space-x-4">
+                    <div class="step-indicator active w-10 h-10 rounded-full border-2 border-gold-600 flex items-center justify-center text-sm font-medium" data-step="1">1</div>
+                    <div class="w-12 h-0.5 bg-gray-300"></div>
+                    <div class="step-indicator w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center text-sm font-medium text-gray-400" data-step="2">2</div>
+                    <div class="w-12 h-0.5 bg-gray-300"></div>
+                    <div class="step-indicator w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center text-sm font-medium text-gray-400" data-step="3">3</div>
+                    <div class="w-12 h-0.5 bg-gray-300"></div>
+                    <div class="step-indicator w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center text-sm font-medium text-gray-400" data-step="4">4</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden reveal-on-scroll">
+                <div class="grid md:grid-cols-5">
+                    <div class="md:col-span-2 bg-charcoal text-white p-8">
+                        <h3 class="font-serif text-2xl mb-6">Booking Summary</h3>
+                        <div id="booking-summary" class="space-y-4 mb-8">
+                            <p class="text-gray-400 text-sm italic">Select a service to begin</p>
+                        </div>
+                        <div class="border-t border-gray-700 pt-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-400">Subtotal</span>
+                                <span id="summary-subtotal" class="font-medium">$0</span>
+                            </div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-400">Tax (8%)</span>
+                                <span id="summary-tax" class="font-medium">$0</span>
+                            </div>
+                            <div class="flex justify-between text-lg font-serif mt-4 pt-4 border-t border-gray-700">
+                                <span>Total</span>
+                                <span id="summary-total" class="text-gold-400">$0</span>
+                            </div>
+                        </div>
+                        <div class="mt-8 p-4 bg-white bg-opacity-10 rounded">
+                            <p class="text-sm text-gray-300 mb-2"><i class="fas fa-info-circle mr-2"></i>Cancellation Policy</p>
+                            <p class="text-xs text-gray-400">Free cancellation up to 24 hours before your appointment.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-3 p-8">
+                        <form id="booking-form" onsubmit="event.preventDefault();">
+                            <div id="step-1" class="step-content">
+                                <h3 class="font-serif text-2xl mb-6 text-charcoal">Select Service</h3>
+                                <div class="space-y-4 max-h-96 overflow-y-auto pr-2" id="service-list"></div>
+                                <div class="mt-8 flex justify-end">
+                                    <button onclick="nextStep(2)" class="px-8 py-3 bg-gold-600 text-white tracking-widest uppercase text-sm hover:bg-gold-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" id="btn-step-1" disabled>
+                                        Continue
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="step-2" class="step-content hidden">
+                                <h3 class="font-serif text-2xl mb-6 text-charcoal">Choose Date & Time</h3>
+                                <div class="mb-6">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Select Date</label>
+                                    <input type="date" id="booking-date" class="w-full p-3 border border-gray-300 rounded-lg focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none">
+                                </div>
+                                <div class="mb-6">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Available Times</label>
+                                    <div id="time-slots" class="grid grid-cols-3 sm:grid-cols-4 gap-3"></div>
+                                </div>
+                                <div class="mt-8 flex justify-between">
+                                    <button onclick="prevStep(1)" class="px-8 py-3 border border-gray-300 text-gray-600 tracking-widest uppercase text-sm hover:border-gold-600 hover:text-gold-600 transition-colors">
+                                        Back
+                                    </button>
+                                    <button onclick="nextStep(3)" class="px-8 py-3 bg-gold-600 text-white tracking-widest uppercase text-sm hover:bg-gold-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" id="btn-step-2" disabled>
+                                        Continue
+                                    </button>
+                                </div>
+                            </div>
+                                                        <div id="step-3" class="step-content hidden">
+                                <h3 class="font-serif text-2xl mb-6 text-charcoal">Choose Your Stylist</h3>
+                                <div class="grid grid-cols-2 gap-4 mb-6" id="stylist-list"></div>
+                                <div class="mt-8 flex justify-between">
+                                    <button onclick="prevStep(2)" class="px-8 py-3 border border-gray-300 text-gray-600 tracking-widest uppercase text-sm hover:border-gold-600 hover:text-gold-600 transition-colors">
+                                        Back
+                                    </button>
+                                    <button onclick="nextStep(4)" class="px-8 py-3 bg-gold-600 text-white tracking-widest uppercase text-sm hover:bg-gold-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" id="btn-step-3" disabled>
+                                        Continue
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="step-4" class="step-content hidden">
+                                <h3 class="font-serif text-2xl mb-6 text-charcoal">Your Details</h3>
+                                <div class="space-y-6">
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div class="input-group">
+                                            <input type="text" id="first-name" placeholder=" " required>
+                                            <label>First Name</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" id="last-name" placeholder=" " required>
+                                            <label>Last Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="email" id="email" placeholder=" " required>
+                                        <label>Email Address</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="tel" id="phone" placeholder=" " required>
+                                        <label>Phone Number</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <textarea id="notes" rows="3" placeholder=" "></textarea>
+                                        <label>Special Requests (Optional)</label>
+                                    </div>
+                                </div>
+                                <div class="mt-8 flex justify-between">
+                                    <button onclick="prevStep(3)" class="px-8 py-3 border border-gray-300 text-gray-600 tracking-widest uppercase text-sm hover:border-gold-600 hover:text-gold-600 transition-colors">
+                                        Back
+                                    </button>
+                                    <button onclick="submitBooking()" class="px-8 py-3 bg-gold-600 text-white tracking-widest uppercase text-sm hover:bg-gold-700 transition-colors flex items-center gap-2" id="btn-submit">
+                                        <span>Confirm Booking</span>
+                                        <div class="spinner hidden" id="submit-spinner"></div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="step-success" class="step-content hidden text-center py-12">
+                                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-check text-3xl text-green-600"></i>
+                                </div>
+                                <h3 class="font-serif text-3xl mb-4 text-charcoal">Booking Confirmed!</h3>
+                                <p class="text-gray-600 mb-8">
+                                    Thank you, <span id="success-name"></span>. Your appointment has been scheduled for <span id="success-date"></span> at <span id="success-time"></span> with <span id="success-stylist"></span>.
+                                </p>
+                                <p class="text-sm text-gray-500 mb-8">
+                                    A confirmation email has been sent to <span id="success-email"></span>.
+                                </p>
+                                <button onclick="resetBooking()" class="px-8 py-3 border border-gold-600 text-gold-600 tracking-widest uppercase text-sm hover:bg-gold-600 hover:text-white transition-colors">
+                                    Book Another
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="reveal-on-scroll">
+                    <p class="text-gold-600 text-sm tracking-[0.2em] uppercase mb-4">Visit Us</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-light mb-8 text-charcoal">
+                        Get in <em class="italic text-gold-600">Touch</em>
+                    </h2>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold-50 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-gold-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Location</h4>
+                                <p class="text-gray-600">245 Avenue of the Arts<br>Suite 400, Los Angeles, CA 90012</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold-50 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-gold-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Hours</h4>
+                                <p class="text-gray-600">Mon - Fri: 9:00 AM - 8:00 PM<br>Sat - Sun: 10:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold-50 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-gold-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Contact</h4>
+                                <p class="text-gray-600">(213) 555-0147<br>hello@lumieresalon.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-charcoal text-white rounded-full flex items-center justify-center hover:bg-gold-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-charcoal text-white rounded-full flex items-center justify-center hover:bg-gold-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-charcoal text-white rounded-full flex items-center justify-center hover:bg-gold-600 transition-colors">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reveal-on-scroll">
+                    <div class="bg-cream p-8 rounded-lg">
+                        <h3 class="font-serif text-2xl mb-6">Send a Message</h3>
+                        <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-6">
+                            <div class="input-group">
+                                <input type="text" id="contact-name" placeholder=" " required>
+                                <label>Your Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="contact-email" placeholder=" " required>
+                                <label>Email Address</label>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="contact-message" rows="4" placeholder=" " required></textarea>
+                                <label>Your Message</label>
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-gold-600 text-white tracking-widest uppercase text-sm hover:bg-gold-700 transition-colors">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <span class="font-serif text-3xl font-light tracking-wider block mb-4">Lumière</span>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Elevating beauty through artistry and personalized care. Experience the difference of true luxury.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Services</a></li>
+                        <li><a href="#gallery" class="hover:text-gold-400 transition-colors">Gallery</a></li>
+                        <li><a href="#booking" class="hover:text-gold-400 transition-colors">Book Now</a></li>
+                        <li><a href="#" class="hover:text-gold-400 transition-colors">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe for exclusive offers and beauty tips.</p>
+                    <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 bg-white bg-opacity-10 border border-gray-700 rounded-l focus:outline-none focus:border-gold-500 text-white placeholder-gray-500">
+                        <button type="submit" class="px-4 py-2 bg-gold-600 rounded-r hover:bg-gold-700 transition-colors">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm"> Lumière Salon & Spa. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0 text-gray-500 text-sm">
+                    <a href="#" class="hover:text-gold-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gold-400 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast fixed top-24 right-4 bg-white shadow-lg rounded-lg p-4 flex items-center gap-3 z-50 border-l-4 border-gold-600 max-w-sm">
+        <i class="fas fa-check-circle text-green-600"></i>
+        <span id="toast-message" class="text-gray-700 text-sm">Notification message</span>
+    </div>
+        <script>
+        const services = [
+            { id: 1, name: "Signature Cut & Style", category: "hair", price: 85, duration: "60 min", description: "Precision haircut with shampoo, condition, and blow-dry styling." },
+            { id: 2, name: "Luxury Blowout", category: "hair", price: 55, duration: "45 min", description: "Professional blow-dry with volume and shine treatment." },
+            { id: 3, name: "Keratin Treatment", category: "hair", price: 250, duration: "120 min", description: "Smoothing treatment for frizz-free, manageable hair." },
+            { id: 4, name: "Balayage Highlights", category: "color", price: 200, duration: "150 min", description: "Hand-painted highlights for a natural, sun-kissed look." },
+            { id: 5, name: "Full Color", category: "color", price: 120, duration: "90 min", description: "Complete color application with gloss treatment." },
+            { id: 6, name: "Root Touch-Up", category: "color", price: 75, duration: "60 min", description: "Color refresh for regrowth maintenance." },
+            { id: 7, name: "Scalp Treatment", category: "spa", price: 65, duration: "45 min", description: "Deep cleansing and nourishing scalp therapy." },
+            { id: 8, name: "Hair Spa Ritual", category: "spa", price: 95, duration: "60 min", description: "Intensive conditioning with massage and steam treatment." },
+            { id: 9, name: "Bridal Styling", category: "hair", price: 150, duration: "90 min", description: "Elegant updo or styled look for your special day." }
+        ];
+
+        const stylists = [
+            { id: 1, name: "Isabella Chen", role: "Creative Director", image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" },
+            { id: 2, name: "Marcus Rivera", role: "Color Director", image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" },
+            { id: 3, name: "Sophie Laurent", role: "Senior Stylist", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" },
+            { id: 4, name: "James Park", role: "Spa Therapist", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" }
+        ];
+
+        const testimonials = [
+            { name: "Victoria M.", text: "The most luxurious salon experience I've ever had. Isabella transformed my hair completely. I left feeling like a new person.", rating: 5 },
+            { name: "Amanda K.", text: "Marcus is a true color artist. My balayage looks incredibly natural and the grow-out is seamless. Worth every penny.", rating: 5 },
+            { name: "Rachel T.", text: "From the moment you walk in, you feel pampered. The scalp treatment was divine and my hair has never been healthier.", rating: 5 }
+        ];
+
+        const galleryImages = [
+            { src: "https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", caption: "Bridal Elegance" },
+            { src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", caption: "Balayage" },
+            { src: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", caption: "Precision Cut" },
+            { src: "https://images.unsplash.com/photo-1487412912498-0447578fcca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", caption: "Spa Ritual" },
+            { src: "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", caption: "Event Styling" },
+            { src: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", caption: "Our Space" }
+        ];
+
+        let currentStep = 1;
+        let selectedService = null;
+        let selectedDate = null;
+        let selectedTime = null;
+        let selectedStylist = null;
+        let currentTestimonial = 0;
+        let currentGalleryIndex = 0;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('booking-date').min = today;
+            filterServices('all');
+            populateServiceList();
+            populateStylists();
+            initTestimonials();
+            document.getElementById('booking-date').addEventListener('change', handleDateChange);
+            initScrollAnimations();
+            window.addEventListener('scroll', handleScroll);
+            document.getElementById('mobile-menu-btn').addEventListener('click', openMobileMenu);
+            document.getElementById('close-menu').addEventListener('click', closeMobileMenu);
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+        });
+
+        function handleScroll() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.remove('nav-hidden');
+                navbar.classList.add('nav-visible');
+            } else {
+                navbar.classList.add('nav-hidden');
+                navbar.classList.remove('nav-visible');
+            }
+        }
+
+        function openMobileMenu() {
+            document.getElementById('mobile-menu').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function filterServices(category) {
+            const grid = document.getElementById('services-grid');
+            const filtered = category === 'all' ? services : services.filter(s => s.category === category);
+            
+            grid.innerHTML = filtered.map(service => `
+                <div class="flex justify-between items-start p-4 border-b border-gray-200 hover:bg-white transition-colors group cursor-pointer" onclick="selectServiceFromList(${service.id})">
+                    <div class="flex-1">
+                        <h4 class="font-serif text-lg text-charcoal group-hover:text-gold-600 transition-colors">${service.name}</h4>
+                        <p class="text-sm text-gray-500 mt-1">${service.description}</p>
+                        <span class="text-xs text-gold-600 mt-2 inline-block">${service.duration}</span>
+                    </div>
+                    <div class="text-right ml-4">
+                        <span class="font-serif text-xl text-gold-600 price-reveal">$${service.price}</span>
+                    </div>
+                </div>
+            `).join('');
+            
+            document.querySelectorAll('.service-filter').forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.classList.add('active', 'bg-gold-600', 'text-white', 'border-gold-600');
+                    btn.classList.remove('text-gold-600', 'border-gray-300', 'text-gray-600');
+                } else {
+                    btn.classList.remove('active', 'bg-gold-600', 'text-white', 'border-gold-600');
+                    btn.classList.add('text-gold-600', 'border-gray-300', 'text-gray-600');
+                }
+            });
+        }
+
+        function populateServiceList() {
+            const list = document.getElementById('service-list');
+            list.innerHTML = services.map(service => `
+                <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-gold-300 transition-all ${selectedService?.id === service.id ? 'border-gold-600 bg-gold-50' : ''}">
+                    <input type="radio" name="service" value="${service.id}" class="custom-radio hidden" onchange="selectService(${service.id})" ${selectedService?.id === service.id ? 'checked' : ''}>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-start mb-1">
+                            <h4 class="font-serif text-lg text-charcoal">${service.name}</h4>
+                            <span class="font-serif text-lg text-gold-600">$${service.price}</span>
+                        </div>
+                        <p class="text-sm text-gray-500">${service.description}</p>
+                        <span class="text-xs text-gray-400 mt-1 inline-block"><i class="far fa-clock mr-1"></i>${service.duration}</span>
+                    </div>
+                    <div class="ml-4 w-6 h-6 rounded-full border-2 ${selectedService?.id === service.id ? 'border-gold-600 bg-gold-600' : 'border-gray-300'} flex items-center justify-center check-icon transition-all">
+                        ${selectedService?.id === service.id ? '<i class="fas fa-check text-white text-xs"></i>' : ''}
+                    </div>
+                </label>
+            `).join('');
+        }
+
+        function selectService(serviceId) {
+            selectedService = services.find(s => s.id === serviceId);
+            populateServiceList();
+            updateSummary();
+            document.getElementById('btn-step-1').disabled = false;
+        }
+
+        function selectServiceFromList(serviceId) {
+            selectService(serviceId);
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function nextStep(step) {
+            document.getElementById(`step-${currentStep}`).classList.add('hidden');
+            document.getElementById(`step-${step}`).classList.remove('hidden');
+            
+            document.querySelectorAll('.step-indicator').forEach((ind, idx) => {
+                const stepNum = idx + 1;
+                ind.classList.remove('active', 'completed');
+                if (stepNum === step) ind.classList.add('active');
+                else if (stepNum < step) ind.classList.add('completed');
+            });
+            
+            currentStep = step;
+            if (step === 2 && !selectedDate) {
+                handleDateChange({ target: { value: new Date().toISOString().split('T')[0] } });
+            }
+        }
+
+        function prevStep(step) { nextStep(step); }
+
+        function handleDateChange(e) {
+            selectedDate = e.target.value;
+            selectedTime = null;
+            document.getElementById('btn-step-2').disabled = true;
+            generateTimeSlots();
+        }
+
+        function generateTimeSlots() {
+            const container = document.getElementById('time-slots');
+            const times = ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM'];
+            
+            container.innerHTML = times.map(time => {
+                const isDisabled = Math.random() > 0.7;
+                return `
+                    <button type="button" 
+                            class="time-slot py-2 px-3 border border-gray-300 rounded text-sm ${isDisabled ? 'disabled' : ''} ${selectedTime === time ? 'selected' : ''}"
+                            onclick="${isDisabled ? '' : `selectTime('${time}')`}"
+                            ${isDisabled ? 'disabled' : ''}>
+                        ${time}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function selectTime(time) {
+            selectedTime = time;
+            document.querySelectorAll('.time-slot').forEach(btn => {
+                btn.classList.remove('selected');
+                if (btn.textContent.trim() === time) btn.classList.add('selected');
+            });
+            document.getElementById('btn-step-2').disabled = false;
+        }
+
+        function populateStylists() {
+            const container = document.getElementById('stylist-list');
+            container.innerHTML = stylists.map(stylist => `
+                <label class="cursor-pointer">
+                    <input type="radio" name="stylist" value="${stylist.id}" class="custom-radio hidden" onchange="selectStylist(${stylist.id})">
+                    <div class="border-2 ${selectedStylist?.id === stylist.id ? 'border-gold-600 bg-gold-50' : 'border-gray-200'} rounded-lg p-4 text-center hover:border-gold-300 transition-all">
+                        <img src="${stylist.image}" alt="${stylist.name}" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+                        <h4 class="font-serif text-lg">${stylist.name}</h4>
+                        <p class="text-xs text-gold-600 tracking-widest uppercase">${stylist.role}</p>
+                        <div class="mt-2 check-icon opacity-0 transform scale-0 transition-all ${selectedStylist?.id === stylist.id ? 'opacity-100 scale-100' : ''}">
+                            <i class="fas fa-check-circle text-gold-600"></i>
+                        </div>
+                    </div>
+                </label>
+            `).join('');
+        }
+
+        function selectStylist(stylistId) {
+            selectedStylist = stylists.find(s => s.id === stylistId);
+            populateStylists();
+            document.getElementById('btn-step-3').disabled = false;
+        }
+
+        function updateSummary() {
+            const summary = document.getElementById('booking-summary');
+            if (!selectedService) {
+                summary.innerHTML = '<p class="text-gray-400 text-sm italic">Select a service to begin</p>';
+                updateTotals(0);
+                return;
+            }
+            
+            let html = `
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <p class="font-medium text-white">${selectedService.name}</p>
+                        <p class="text-xs text-gray-400">${selectedService.duration}</p>
+                    </div>
+                    <span class="text-gold-400">$${selectedService.price}</span>
+                </div>
+            `;
+            
+            if (selectedDate && selectedTime) {
+                html += `
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <p class="font-medium text-white">Date & Time</p>
+                            <p class="text-xs text-gray-400">${new Date(selectedDate).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })} at ${selectedTime}</p>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            if (selectedStylist) {
+                html += `
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-medium text-white">Stylist</p>
+                            <p class="text-xs text-gray-400">${selectedStylist.name}</p>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            summary.innerHTML = html;
+            updateTotals(selectedService.price);
+        }
+
+        function updateTotals(subtotal) {
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+            document.getElementById('summary-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('summary-tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('summary-total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        function submitBooking() {
+            const firstName = document.getElementById('first-name').value;
+            const email = document.getElementById('email').value;
+            
+            if (!firstName || !email) {
+                showToast('Please fill in all required fields');
+                return;
+            }
+            
+            document.getElementById('submit-spinner').classList.remove('hidden');
+            document.getElementById('btn-submit').disabled = true;
+            
+            setTimeout(() => {
+                document.getElementById('submit-spinner').classList.add('hidden');
+                document.getElementById('step-4').classList.add('hidden');
+                document.getElementById('step-success').classList.remove('hidden');
+                document.getElementById('success-name').textContent = firstName;
+                document.getElementById('success-date').textContent = new Date(selectedDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+                document.getElementById('success-time').textContent = selectedTime;
+                document.getElementById('success-stylist').textContent = selectedStylist.name;
+                document.getElementById('success-email').textContent = email;
+                createConfetti();
+                document.querySelectorAll('.step-indicator').forEach(ind => ind.classList.add('completed'));
+            }, 1500);
+        }
+
+        function resetBooking() {
+            currentStep = 1;
+            selectedService = null;
+            selectedDate = null;
+            selectedTime = null;
+            selectedStylist = null;
+            document.getElementById('booking-form').reset();
+            document.getElementById('step-success').classList.add('hidden');
+            document.getElementById('step-1').classList.remove('hidden');
+            document.querySelectorAll('.step-indicator').forEach((ind, idx) => {
+                ind.classList.remove('active', 'completed');
+                if (idx === 0) ind.classList.add('active');
+            });
+            populateServiceList();
+            updateSummary();
+            document.getElementById('btn-step-1').disabled = true;
+        }
+
+        function initTestimonials() {
+            const container = document.getElementById('testimonial-container');
+            const dotsContainer = document.getElementById('testimonial-dots');
+            
+            container.innerHTML = testimonials.map((t, i) => `
+                <div class="testimonial-slide ${i === 0 ? 'active' : ''}" data-index="${i}">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <div class="flex justify-center gap-1 mb-6">
+                            ${Array(t.rating).fill('<i class="fas fa-star text-gold-400"></i>').join('')}
+                        </div>
+                        <p class="font-serif text-2xl md:text-3xl italic text-charcoal mb-6 leading-relaxed">"${t.text}"</p>
+                        <p class="text-sm tracking-widest uppercase text-gold-600">— ${t.name}</p>
+                    </div>
+                </div>
+            `).join('');
+            
+            dotsContainer.innerHTML = testimonials.map((_, i) => `
+                <button onclick="goToTestimonial(${i})" class="w-3 h-3 rounded-full transition-all ${i === 0 ? 'bg-gold-600 w-8' : 'bg-gray-300 hover:bg-gold-400'}"></button>
+            `).join('');
+            
+            setInterval(() => {
+                goToTestimonial((currentTestimonial + 1) % testimonials.length);
+            }, 5000);
+        }
+
+        function goToTestimonial(index) {
+            currentTestimonial = index;
+            document.querySelectorAll('.testimonial-slide').forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            document.querySelectorAll('#testimonial-dots button').forEach((dot, i) => {
+                dot.className = `w-3 h-3 rounded-full transition-all ${i === index ? 'bg-gold-600 w-8' : 'bg-gray-300 hover:bg-gold-400'}`;
+            });
+        }
+
+        function openLightbox(index) {
+            currentGalleryIndex = index;
+            updateLightbox();
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.body.st
